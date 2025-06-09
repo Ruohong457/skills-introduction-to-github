@@ -1,16 +1,38 @@
-# Introduction to GitHub
+# Detecting Machine-Generated Text Across Granularity, Domains, and LLMs
 
-<img src="https://octodex.github.com/images/Professortocat_v2.png" align="right" height="200px" />
+This repository contains the code and (partial) data used in the master's thesis project completed at Tilburg University for the MSc in Data Science & Society.
 
-Hey @Ruohong457!
+## 📘 Project Overview
 
-Mona here. I'm done preparing your exercise. Hope you enjoy! 💚
+The project investigates the generalization capabilities of machine-generated text detectors under realistic distribution shifts. Specifically, it evaluates how detection models perform when:
 
-Remember, it's self-paced so feel free to take a break! ☕️
+- The **text granularity** varies (e.g., sentence, paragraph, document),
+- The **content domain** shifts (e.g., academic, social media, fiction),
+- The **source LLM** differs (e.g., ChatGPT, GPT-4, DeepSeek R1).
 
-[![](https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/Ruohong457/skills-introduction-to-github/issues/1)
+A multilingual approach was adopted, covering both English and Chinese datasets.
 
----
+## ⚙️ Methods
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+Four transformer-based classifiers were fine-tuned and tested:
+
+- RoBERTa (English)
+- XLM-R (multilingual)
+- DistilBERT (English, efficient)
+- MacBERT (Chinese)
+
+Key techniques:
+
+- Fine-tuning on human vs. LLM-generated text
+- Cross-domain evaluation
+- SHAP analysis for model interpretability
+- Custom benchmark dataset: **AGT-2025**
+
+## 🧪 Evaluation
+
+- Models were evaluated using precision, recall, F1, and accuracy.
+- Special focus on generalization: tested on unseen domains, granularities, and newer LLMs.
+- Confusion matrices and detailed analysis provided in the appendices.
+
+## 📁 Repository Structure
 
