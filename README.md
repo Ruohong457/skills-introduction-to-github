@@ -18,16 +18,16 @@ Four transformer-based classifiers were fine-tuned and tested:
 
 - `roberta-base` (English)
 - `chinese-roberta-wwm-ext` (Chinese)
-- `DistilBERT` (English lightweight baseline)
-- `MacBERT` (Chinese-specific)
-- `XLM-R` (Multilingual baseline)
+- `DistilBERT` (English)
+- `MacBERT` (Chinese)
+- `XLM-R` (Multilingual)
 
 Key techniques:
 
 - Fine-tuning on human vs. LLM-generated text
 - Mixed-granularity training for robustness
 - Cross-domain and cross-LLM evaluation
-- SHAP analysis for interpretability
+- Evaluation across LLMs, domains, and input granularities to assess model robustness
 - Custom benchmark dataset: **AGT-2025**
 
 ## 🧪 Evaluation
